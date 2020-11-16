@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Pet 
 
 
 # Create your views here.
@@ -10,7 +11,8 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='/login/')
 def index(request):
-    return render(request, 'index.html')
+    pets = Pets.objects.filter(active=True)
+    return render(request, 'list.html', {'pets':pets})
 
 def logout_user(request):
    

@@ -1,4 +1,4 @@
-#!c:\users\aluno\documents\github\sospet\venv\scripts\python.exe
+#!d:\users\aluno\documents\github\sospet\venv\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
