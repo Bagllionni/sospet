@@ -1,5 +1,21 @@
-<h1>LOGADO</h1>
+{% extends "model.page.html" %}
+<style>
+</style>
+{% block content %}
+ 
+    <div classs="container">
+        <div class="row">
+            {% for p in pet%}
+                <div class="col-sm-4">
+                    <div class="polaroid">
+                        <img src="{{ p.photo.url }}" style="witdh:100%">
+                        <div class="container">
+                            <p>{{ p-city }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
-
-
-<a hred="/logout/">Sair</a>
+<a href="/logout/">Sair</a>
